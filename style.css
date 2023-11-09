@@ -1,0 +1,145 @@
+.btn-start,
+.quiz-box,
+.score-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.quiz-box.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%,-50%) scale(1);
+}
+.quiz-box {
+    width: 450px;
+    transition: 0.3s ease;
+    transform: translate(-50%,-50%) scale(0.5);
+
+    opacity: 0;
+    pointer-events: none;
+}
+.quiz-box .card-header .title {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+.quiz-box .card-header {
+    background-color: rgb(228, 187, 23);
+}
+.card-body .question-text {
+    font-size: 19px;
+    font-weight: 500;
+}
+.card-body .option-list {
+    padding: 25px 5px;
+}
+.option-list .option {
+    margin-bottom: 10px;
+    font-size: 14px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    display: flex;
+    justify-content: space-between;
+}
+.option-list .option:hover {
+    background-color: rgb(255, 247, 154);
+}
+.option-list .option.correct {
+    background-color: rgb(180, 255, 180);
+}
+.option-list .option.incorrect {
+    background-color: rgb(255, 186, 186);
+}
+.btn-start.inactive {
+    opacity: 0;
+}
+.disabled {
+    pointer-events: none;
+}
+.next-button {
+    opacity: 0;
+    pointer-events: none;
+
+    transform: scale(0.8);
+    transition: 0.3s ease;
+}
+.next-button.show {
+    opacity: 1;
+    pointer-events: auto;
+
+    transform: scale(1);
+}
+footer.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.score-box.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%,-50%) scale(1);
+}
+.score-box {
+    width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: 0.3s ease;
+    transform: translate(-50%,-50%) scale(0.5);
+
+    opacity: 0;
+    pointer-events: none;
+}
+.score-box button {
+    width: 120px;
+}
+.score-buttons {
+    flex-direction: row;
+}
+.score-box .icon {
+    font-size: 70px;
+    color: rgb(255, 217, 0);
+    margin-bottom: 10px;
+}
+.score-box .score-text {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 17px;
+}
+.quiz-box header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.quiz-box header .timer {
+    display: flex;
+    align-items: center;
+    background-color: rgb(22, 119, 183);
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+.quiz-box header .timer .timer-second {
+    background-color: rgb(255, 208, 0);
+    padding: 3px;
+    border-radius: 5px;
+    margin-left: 5px;
+    width: 30px;
+    text-align: center;
+    font-weight: 500;
+}
+.quiz-box header .timer-line {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+
+    height: 4px;
+    background-color: yellow;
+}
